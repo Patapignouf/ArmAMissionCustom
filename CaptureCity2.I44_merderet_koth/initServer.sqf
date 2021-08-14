@@ -24,4 +24,4 @@ if (capturemarkers == 4) then
 true,  
 false  
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, true]; 
-} forEach [flag1, flag2, flag3, flag4, flag5];
+} forEach [flag1, flag2, flag3, flag4];
