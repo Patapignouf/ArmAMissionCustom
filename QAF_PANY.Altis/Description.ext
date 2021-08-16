@@ -1,0 +1,12 @@
+class Params
+{
+	class EnableNight
+	{
+		title = "Enable night mode";
+		values[] = {0,1};
+		texts[] = {"No","Yes"};
+		default = 0;
+	};
+
+
+};
