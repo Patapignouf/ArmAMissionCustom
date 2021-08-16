@@ -1,4 +1,3 @@
-if (!hasInterface || isDedicated) exitWith {};
 {  
 [  
 _x,  

@@ -1,7 +1,5 @@
 if (!hasInterface || isDedicated) exitWith {};
 
-if (isServer) then
-{
 _buildingPlaces = [nearestBuilding (getPos x1)] call BIS_fnc_buildingPositions; 
 _x1BuildingPlace = [0,((count _buildingPlaces)-1)] call BIS_fnc_randomInt;     
 _powPos = getPos (nearestBuilding(getPos x1)); 
@@ -17,7 +15,7 @@ removeHeadgear x1;
 removeGoggles x1; 
 removeAllItems x1; 
 {x1 removeMagazine _x} forEach magazines x1; 
-};
+
 
 [  
 x1,  
