@@ -24,3 +24,8 @@ true,
 false  
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, true]; 
 } forEach [flag1, flag2, flag3, flag4];
+
+
+{
+[_x, _x, 75, [], true] call lambs_wp_fnc_taskGarrison;
+} forEach [o1,o2,o3,o4,o5,o6,o7];
