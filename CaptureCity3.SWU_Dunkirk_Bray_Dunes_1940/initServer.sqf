@@ -42,8 +42,17 @@ false
 //IA taskPatrol
 {
 [_x, _x, 250] call lambs_wp_fnc_taskPatrol;
-} forEach [p1,p2,p3,p4,p5,p6,p7];
+} forEach [p1,p2,p3,p4,p5,p6,p7,p8];
 
 
 //Teleport to boat
-[TPA, ["Teleport to the north insertion point!", { player moveInCargo (selectRandom [b1,b2]) }]] remoteExec ["addAction"];
+//[TPA, ["Teleport to the boat!", { player moveInCargo (selectRandom [b1,b2]) }]] remoteExec ["addAction"];
+
+
+//Arsenal without save/load
+[missionNamespace, "arsenalOpened", {
+		disableSerialization;
+		params ["_display"];
+		_display displayAddEventHandler ["keydown", "_this select 3"];
+		{(_display displayCtrl _x) ctrlShow false} forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
+	}] call BIS_fnc_addScriptedEventHandler;

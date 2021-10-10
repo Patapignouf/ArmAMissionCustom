@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=387;
+		nextID=398;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1635.7234,190.61346,3008.7854};
-		dir[]={-0.2714285,-0.43315601,0.85958749};
-		up[]={-0.13045423,0.90125966,0.41314524};
-		aside[]={0.95368713,1.5499536e-006,0.30114207};
+		pos[]={938.92725,92.8563,6258.3394};
+		dir[]={-0.58211952,-0.62754118,0.51703912};
+		up[]={-0.46919066,0.77858299,0.41673553};
+		aside[]={0.66407651,-4.5169145e-008,0.74766499};
 	};
 };
 binarizationWanted=0;
@@ -53,13 +53,14 @@ addons[]=
 	"WW2_Assets_c_Vehicles_Wheeled_c_Kfz1",
 	"WW2_Assets_c_Vehicles_WheeledAPC_c_SdKfz251",
 	"WW2_Assets_c_Vehicles_WheeledAPC_c_SdKfz7",
-	"WW2_Assets_c_Vehicles_Planes_c_FW190F8"
+	"WW2_Assets_c_Vehicles_Planes_c_FW190F8",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Boat_F_Jets";
@@ -206,6 +207,13 @@ class AddonsMetaData
 			className="WW2_Assets_c_Vehicles_Planes_c_FW190F8";
 			name="WW2_Assets_c_Vehicles_Planes_c_FW190F8";
 		};
+		class Item28
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -247,7 +255,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=80;
+		items=84;
 		class Item0
 		{
 			dataType="Object";
@@ -5984,6 +5992,7 @@ class Mission
 				};
 			};
 			id=381;
+			atlOffset=-0.00081634521;
 		};
 		class Item79
 		{
@@ -6004,6 +6013,252 @@ class Mission
 			};
 			id=386;
 			type="LIB_T34_76_captured";
+			atlOffset=-0.00081634521;
+		};
+		class Item80
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={881.12885,24.420593,6318.8281};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="null = [this] execVM ""Americans_virtual_arsenal_init.sqf""";
+				name="box1";
+			};
+			id=387;
+			type="I_supplyCrate_F";
+			atlOffset=166.425;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item81
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1912.6934,32.559967,3107.7058};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+					};
+					id=389;
+					type="SG_sturmtrooper_unterofficer";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1915.6934,33.842453,3102.7058};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=390;
+					type="SG_sturmtrooper_rifleman";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1917.6934,34.211163,3102.7058};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=391;
+					type="SG_sturmtrooper_medic";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1919.6934,34.531178,3102.7058};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=392;
+					type="SG_sturmtrooper_stggunner";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1921.6934,34.76062,3102.7058};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=393;
+					type="SG_sturmtrooper_ober_rifleman";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1923.6934,34.931164,3102.7058};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=394;
+					type="SG_sturmtrooper_ober_rifleman";
+				};
+			};
+			class Attributes
+			{
+				name="p8";
+				dynamicSimulation=1;
+			};
+			id=388;
+		};
+		class Item82
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1823.3629,58.595108,2085.0264};
+						angles[]={0,5.7711577,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=396;
+					type="LIB_GER_pilot";
+					atlOffset=-1.9073486e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=396;
+						item1=397;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=395;
+			atlOffset=135.269;
+		};
+		class Item83
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1823.3749,195.2502,2084.6279};
+				angles[]={0,5.7711577,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				presence=0.73720795;
+				presenceCondition="""EnablePlane"" call BIS_fnc_getParamValue==1";
+			};
+			id=397;
+			type="LIB_FW190F8_2";
+			atlOffset=135.269;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
